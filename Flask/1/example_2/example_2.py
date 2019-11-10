@@ -4,12 +4,17 @@ app = Flask('example_2')
 
 
 @app.route('/')
+@app.route("/index")
+def index():
+    return "Hello, Welcome in Resala Foundation."
+
+
 @app.route("/home")
 def home():
     return """
     <html>
         <head><title>home</title></head>
-        <body><h1>Resala</h1></body>
+        <body><h1>Welcome in Resala</h1></body>
     </html>
     """
 
