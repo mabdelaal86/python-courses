@@ -9,6 +9,7 @@
 * HTML, CSS & JavaScript
 * Simple Flask application
 * Templates
+* Static Files
 
 ## References
 

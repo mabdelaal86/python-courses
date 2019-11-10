@@ -1,0 +1,21 @@
+<html>
+
+<head>
+<title>My Cat</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+<h1 id="my_h">My Cat</h1>
+<p class="my_class">This is my beautiful cat</p>
+<img id="my_img" src="{{ url_for('static', filename='my_cat.jpg') }}" width="50%">
+
+<div>
+    <button onclick="hide_img()">
+        Click me
+    </button>
+</div>
+</body>
+
+</html>
