@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Resala</title>
+    </head>
+    <body>
+        <h1>
+            {% if user['gender'] == "Male" %}
+            Hello Mr.
+            {% elif user['age'] > 27 %}
+            Hello Mrs.
+            {% else %}
+            Hello Ms.
+            {% endif %}
+            {{user['name']}}, Welcome to Python Course!</h1>
+    </body>
+</html>
