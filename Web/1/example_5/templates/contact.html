@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form>
+    <table>
+        <tr>
+            <td><label>Name:</label></td>
+            <td><input type="text" placeholder="Name"></td>
+        </tr>
+        <tr>
+            <td><label>Email:</label></td>
+            <td><input type="text" placeholder="Email Address"></td>
+        </tr>
+        <tr>
+            <td><label>Subject:</label></td>
+            <td><input type="text" placeholder="Subject"></td>
+        </tr>
+        <tr>
+            <td><label>Message:</label></td>
+            <td><textarea cols="" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Send</button></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

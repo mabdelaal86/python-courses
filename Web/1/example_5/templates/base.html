@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  {% if title %}
+  <title>{{ title }} - Microsite</title>
+  {% else %}
+  <title>Welcome to Microsite</title>
+  {% endif %}
+</head>
+
+<body>
+  <ul>
+    <li><a href="/index">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+  <hr>
+  {% block content %}{% endblock %}
+  <h6>Microsite copyright</h6>
+</body>
+
+</html>
