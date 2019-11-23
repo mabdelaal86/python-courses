@@ -1,8 +1,8 @@
-# Python Web Course
+# Python Web Course #
 
-## Content
+## Content ##
 
-### Lecture 1
+### Lecture 1 ##
 
 * Backend vs Frontend
 * Web page anatomy
@@ -11,7 +11,11 @@
 * Templates
 * Static Files
 
-## References
+### Lecture 2 ###
+
+* Access Request Data
+
+## References ##
 
 * <https://flask.palletsprojects.com/en/1.1.x/>
 * <https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world>

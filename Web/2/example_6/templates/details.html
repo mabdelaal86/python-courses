@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Students Details</title>
+</head>
+
+<body>
+    <h1>Students Details</h1>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+
+    {% for student in students %}
+    <ul>
+        <li>Id: {{ student['id'] }}</li>
+        <li>Name: {{ student['name'] }}</li>
+        <li>Gender: {{ student['gender'] }}</li>
+        <li>Birth Date: {{ student['birth_date'] }}</li>
+        <li>Address: {{ student['address'] }}</li>
+        <li>Class: {{ student['class'] }}</li>
+        <li>Group: {{ student['group'] }}</li>
+    </ul>
+    {% endfor %}
+</body>
+
+</html>
