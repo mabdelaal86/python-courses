@@ -19,6 +19,8 @@
 
 * Request Methods
 * Redirects
+* Cookies
+* Sessions
 
 ## References ##
 
