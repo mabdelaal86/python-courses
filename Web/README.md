@@ -2,17 +2,17 @@
 
 ## Content ##
 
-### Lecture 1 ##
+### Lecture 1 ###
 
 * Backend vs Frontend
 * Web page anatomy
 * HTML, CSS & JavaScript
 * Simple Flask application
 * Templates
-* Static Files
 
 ### Lecture 2 ###
 
+* Static Files
 * Access Request Data
 
 ## References ##
