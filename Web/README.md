@@ -15,6 +15,11 @@
 * Static Files
 * Access Request Data
 
+### Lecture 3 ###
+
+* Request Methods
+* Redirects
+
 ## References ##
 
 * <https://flask.palletsprojects.com/en/1.1.x/>
