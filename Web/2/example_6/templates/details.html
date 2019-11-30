@@ -9,9 +9,7 @@
     <h1>Students Details</h1>
     {% if message %}
     <p>{{ message }}</p>
-    {% endif %}
-
-    {% for student in students %}
+    {% else %}
     <ul>
         <li>Id: {{ student['id'] }}</li>
         <li>Name: {{ student['name'] }}</li>
@@ -21,7 +19,8 @@
         <li>Class: {{ student['class'] }}</li>
         <li>Group: {{ student['group'] }}</li>
     </ul>
-    {% endfor %}
+    {% endif %}
+
 </body>
 
 </html>

@@ -9,7 +9,11 @@
     <h1>Students</h1>
     
     <form>
-        <p><label>Name:</label><input type="text" placeholder="Name"></p>
+        <p>
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Name">
+            <button type="submit">Search</button>
+        </p>
     </form>
 
     {% if message %}
@@ -18,7 +22,7 @@
 
     {% for student in students %}
     <ul>
-        <li>Id: <a href="{{ url_for('student', id=student['id']) }}">{{ student['id'] }}</a></li>
+        <li>Id: {{ student['id'] }}</li>
         <li>Name: {{ student['name'] }}</li>
         <li>Gender: {{ student['gender'] }}</li>
         <li>Class: {{ student['class'] }}, Group: {{ student['group'] }}</li>

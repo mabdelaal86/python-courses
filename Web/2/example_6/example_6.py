@@ -15,33 +15,34 @@ students = [
 @app.route("/search")
 def search():
     search_word = request.args.get('name', '').lower()
-    filter_students = [s for s in students if search_word in s['name'].lower()]
-    message = "No students match this name" if len(filter_students) == 0 else ""
+
+    filter_students = []
+    for s in students:
+        if search_word in s['name'].lower():
+            filter_students.append(s)
+
+    message = ""
+    if len(filter_students) == 0:
+        message = "No students match this name"
+
     return render_template('search.html', students=filter_students, message=message)
 
 
 @app.route("/details")
 def details():
     id = int(request.args.get('id', ''))
-    filter_students = [s for s in students if id == s['id']]
-    message = "No student with this id" if len(filter_students) == 0 else ""
-    return render_template('details.html', students=filter_students, message=message)
 
+    student = None
+    for s in students:
+        if id == s['id']:
+            student = s
+            break
 
-@app.route("/student/<int:id>")
-def student(id):
-    filter_students = [s for s in students if id == s['id']]
-    message = "No student with this id" if len(filter_students) == 0 else ""
-    return render_template('details.html', students=filter_students, message=message)
+    message = ""
+    if student is None:
+        message = "No student with this id"
 
-
-@app.route("/register", methods=['POST', 'GET'])
-def register():
-    if request.method == 'POST':
-        students.append(request.form)
-        return render_template('details.html', students=[request.form])
-    else:
-        return render_template('register.html')
+    return render_template('details.html', student=student, message=message)
 
 
 app.run(debug=True)
