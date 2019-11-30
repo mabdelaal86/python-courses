@@ -21,11 +21,7 @@ def search():
         if search_word in s['name'].lower():
             filter_students.append(s)
 
-    message = ""
-    if len(filter_students) == 0:
-        message = "No students match this name"
-
-    return render_template('search.html', students=filter_students, message=message)
+    return render_template('search.html', students=filter_students)
 
 
 @app.route("/details")
@@ -38,11 +34,7 @@ def details():
             student = s
             break
 
-    message = ""
-    if student is None:
-        message = "No student with this id"
-
-    return render_template('details.html', student=student, message=message)
+    return render_template('details.html', student=student)
 
 
 app.run(debug=True)

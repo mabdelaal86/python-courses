@@ -16,10 +16,7 @@
         </p>
     </form>
 
-    {% if message %}
-    <p>{{ message }}</p>
-    {% endif %}
-
+{% if students %}
     {% for student in students %}
     <ul>
         <li>Id: {{ student['id'] }}</li>
@@ -28,6 +25,10 @@
         <li>Class: {{ student['class'] }}, Group: {{ student['group'] }}</li>
     </ul>
     {% endfor %}
+{% else %}
+    <p>No students match this name</p>
+{% endif %}
+
 </body>
 
 </html>
