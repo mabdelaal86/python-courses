@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Students Details</title>
+</head>
+
+<body>
+    <h1>Students Details</h1>
+{% if student %}
+    <ul>
+        <li>Id: {{ student['id'] }}</li>
+        <li>Name: {{ student['name'] }}</li>
+        <li>Gender: {{ student['gender'] }}</li>
+        <li>Birth Date: {{ student['birth_date'] }}</li>
+        <li>Address: {{ student['address'] }}</li>
+        <li>Class: {{ student['class'] }}</li>
+        <li>Group: {{ student['group'] }}</li>
+    </ul>
+{% else %}
+    <p>No student with this id</p>
+{% endif %}
+    <p><a href="{{ url_for('search') }}">Find All</a></p>
+</body>
+
+</html>

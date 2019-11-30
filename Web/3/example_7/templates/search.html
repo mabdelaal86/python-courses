@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Students Search</title>
+</head>
+
+<body>
+    <h1>Students</h1>
+    
+    <form>
+        <p>
+            <label>Name:</label>
+            <input type="text" name="name" placeholder="Name">
+            <button type="submit">Search</button>
+            <a href="{{ url_for('register') }}">Register</a>
+        </p>
+    </form>
+
+{% if students %}
+    {% for student in students %}
+    <ul>
+        <li>Id: <a href="{{ url_for('student', id=student['id']) }}">{{ student['id'] }}</a></li>
+        <li>Name: {{ student['name'] }}</li>
+        <li>Gender: {{ student['gender'] }}</li>
+        <li>Class: {{ student['class'] }}, Group: {{ student['group'] }}</li>
+    </ul>
+    {% endfor %}
+{% else %}
+    <p>No students match this name</p>
+{% endif %}
+
+</body>
+
+</html>
