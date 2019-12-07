@@ -19,9 +19,9 @@ def search():
     return render_template('search.html', students=filter_students)
 
 
-@app.route("/student/<int:id>/")
-def student(id):
-    student = next( (s for s in students if id == int(s['id']) ), None)
+@app.route("/student/<int:student_id>/")
+def student(student_id):
+    student = next( (s for s in students if student_id == int(s['id']) ), None)
     return render_template('details.html', student=student)
 
 
@@ -29,7 +29,7 @@ def student(id):
 def register():
     if request.method == 'POST':
         students.append(request.form)
-        return redirect(url_for('student', id=request.form['id']))
+        return redirect(url_for('student', student_id=request.form['id']))
     else:
         return render_template('register.html')
 

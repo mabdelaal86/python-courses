@@ -18,9 +18,16 @@
 ### Lecture 3 ###
 
 * Request Methods
-* Redirects
+* Redirection
 * Cookies
 * Sessions
+
+### Lecture 4 ###
+
+* JSON
+* Web API
+* Handling Errors
+* Access Database
 
 ## References ##
 
