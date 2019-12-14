@@ -34,7 +34,7 @@ def create():
     student_id = data['id']
 
     if student_id in students:
-        return abort(400, "Duplicated ID")
+        abort(400, "Duplicated ID")
 
     students[student_id] = data
     return jsonify(data), 201
@@ -42,15 +42,11 @@ def create():
 
 @app.route("/students/<int:student_id>/", methods=['PUT'])
 def update(student_id):
-    data = request.get_json()
-    student = students.get(student_id)
-
-    if student == None:
+    if student_id not in students:
         abort(404, "Student not found")
 
-    for key in data:
-        student[key] = data[key]
-
+    data = request.get_json()
+    students[student_id] = data
     return "", 204
 
 
@@ -63,11 +59,5 @@ def delete(student_id):
     return "", 204
 
 
-@app.errorhandler(404)
-@app.errorhandler(400)
-def on_error(error):
-    return jsonify({"status": error.code, "title": error.description}), error.code
-
-
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(debug=True)

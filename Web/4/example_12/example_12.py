@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 
-print(__name__)
-app = Flask("example_10")
+app = Flask(__name__)
 
 
 students = {
@@ -22,6 +21,10 @@ def read_all():
 @app.route("/students/<int:student_id>/", methods=['GET'])
 def read(student_id):
     student = students.get(student_id)
+
+    if student is None:
+        abort(404, "Student not found")
+
     return jsonify(student)
 
 
@@ -31,29 +34,36 @@ def create():
     student_id = data['id']
 
     if student_id in students:
-        return jsonify({"message": "error. duplicated ID"})
+        abort(400, "Duplicated ID")
 
     students[student_id] = data
-    return jsonify({"message": "success"})
+    return jsonify(data), 201
 
 
 @app.route("/students/<int:student_id>/", methods=['PUT'])
 def update(student_id):
     if student_id not in students:
-        return jsonify({"message": "not found"})
+        abort(404, "Student not found")
 
     data = request.get_json()
     students[student_id] = data
-    return jsonify({"message": "success"})
+    return "", 204
 
 
 @app.route("/students/<int:student_id>/", methods=['DELETE'])
 def delete(student_id):
     if student_id not in students:
-        return jsonify({"message": "not found"})
+        abort(404, "Student not found")
 
     del students[student_id]
-    return jsonify({"message": "success"})
+    return "", 204
 
 
-app.run(debug=True)
+@app.errorhandler(404)
+@app.errorhandler(400)
+def on_error(error):
+    return jsonify({"status": error.code, "title": error.description}), error.code
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)
