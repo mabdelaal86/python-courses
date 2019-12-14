@@ -7,7 +7,7 @@ app = Flask('example_8')
 
 @app.route("/c1")
 def c1():
-    username = request.cookies.get('username')
+    username = request.cookies.get('username', '??')
     return "User Name: " + username
 
 
