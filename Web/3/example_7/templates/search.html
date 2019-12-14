@@ -20,7 +20,7 @@
 {% if students %}
     {% for student in students %}
     <ul>
-        <li>Id: <a href="{{ url_for('student', id=student['id']) }}">{{ student['id'] }}</a></li>
+        <li>Id: <a href="{{ url_for('student', student_id=student['id']) }}">{{ student['id'] }}</a></li>
         <li>Name: {{ student['name'] }}</li>
         <li>Gender: {{ student['gender'] }}</li>
         <li>Class: {{ student['class'] }}, Group: {{ student['group'] }}</li>
