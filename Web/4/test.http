@@ -1,0 +1,39 @@
+### read all
+GET http://127.0.0.1:5000/students
+
+
+### read
+GET http://127.0.0.1:5000/students/2
+
+
+### create
+POST http://127.0.0.1:5000/students
+
+{
+	"name": "Ahmad Jamal",
+	"gender": "Male",
+	"birth_date": "1996-12-02",
+	"address": "Giza",
+	"phone": "0122547",
+	"class": 2,
+	"group": "A"
+}
+
+
+### update
+PUT http://127.0.0.1:5000/students/3/
+
+{
+	"id": "3",
+	"name": "Ahmad Jamal",
+	"gender": "Male",
+	"birth_date": "1996-12-02",
+	"address": "Giza",
+	"phone": "0122547",
+	"class": 2,
+	"group": "B"
+}
+
+
+### delete
+DELETE http://127.0.0.1:5000/students/3/
