@@ -36,4 +36,4 @@
 
 * <https://flask.palletsprojects.com/en/1.1.x/>
 * <https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world>
-* <https://www.tutorialspoint.com/flask/index.htm>
+* <https://www.tutorialspoint.com/flask/>
