@@ -38,3 +38,5 @@ while your_num != my_num:
 print('\nYou got it. Great work')
 print('It is a great pleasure to talk with you')
 print('\nI have to leave now, Goodbye')
+
+input()

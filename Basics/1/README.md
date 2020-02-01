@@ -12,11 +12,15 @@
 * What is programming languages?
 * What is compiler?
 
-## Programs ##
+## Big Picture ##
 
+* Compiler example
+* Interpreter
+* Python comand line
+* CMD/Terminal
 * intro.py
 
-## Python ##
+## Discourse ##
 
 * Print “hello world”
 * Edit ‘print’, ‘hello world’ and ‘( )’
@@ -34,6 +38,9 @@
   * Add two numbers
 * Analysis user requirements: inputs, processing, outputs
   * Rectangle (Width, Length => Area, Perimeter)
-  * Circle (Radius => Area, Perimeter)
-  * Cube (Side Length => Volume)
-  * Convert temperature degrees (Celsius => Fahrenheit)
+
+## Exercises ##
+
+* Circle (Radius => Area, Perimeter)
+* Cube (Side Length => Volume)
+* Convert temperature degrees (Celsius => Fahrenheit)
