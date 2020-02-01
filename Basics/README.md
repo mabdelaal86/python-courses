@@ -38,4 +38,3 @@
 * <https://en.wikibooks.org/wiki/Python_Programming>
 * <http://www.trytoprogram.com/python-programming/>
 * <https://www.tutorialspoint.com/python3/>
-* <https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python->
