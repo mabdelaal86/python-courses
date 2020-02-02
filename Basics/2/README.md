@@ -2,7 +2,7 @@
 
 ## Discourse ##
 
-* Boolean data type (`true`/`false`)
+* Boolean data type (`True`/`False`)
 * `type` function
 * Comparison operators (`<`, `>`, `<=`, `>=`, `==`, `!=`)
 * Parent/child statements `:`
