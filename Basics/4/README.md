@@ -22,4 +22,5 @@
 
 ## Exercises ##
 
-* ???
+* temperature standard deviation
+* employees subvention
